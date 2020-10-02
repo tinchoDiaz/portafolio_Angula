@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { InfoPaginaService } from '../../services/info-pagina.service';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-header',
@@ -8,10 +11,21 @@ import { InfoPaginaService } from '../../services/info-pagina.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor( public _servicio: InfoPaginaService ) {
+  termino: string;
+
+  constructor( public _servicio: InfoPaginaService,
+                private router: Router ) {
   }
 
   ngOnInit() {
   }
+
+  buscarProducto(){
+    if (this.termino.length<1){ /*Termino esta asociado al item de busqueda en el HTML*/
+      return;
+    }
+    this.router.navigate(['/search', this.termino]);
+  }
+
 
 }

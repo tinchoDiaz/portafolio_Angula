@@ -8,8 +8,6 @@ import { InfoPaginaService } from '../../services/info-pagina.service';
 })
 export class AboutComponent implements OnInit {
 
-  pepe : any= [];
-
   constructor( public _infoService: InfoPaginaService) {
     console.log("Contructor de About.Component");
   }
