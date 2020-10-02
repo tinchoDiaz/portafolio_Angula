@@ -14,7 +14,6 @@ import { ItemComponent } from './pages/item/item.component';
 //
 import { HttpClientModule } from '@angular/common/http';
 //
-import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
@@ -31,7 +30,6 @@ import { SearchComponent } from './pages/search/search.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
   ],
   providers: [],    /*Los servicios van en Provider*/
   bootstrap: [AppComponent]

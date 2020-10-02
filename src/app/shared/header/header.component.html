@@ -41,10 +41,14 @@
       </ul>
 
 
-      <!--<div class="rk-search">-->
-      <div class="form-group">
-        <input type="text" placeholder="Buscar..." id="urku-search" class="rk-search-field"
-          [(ngModel)]="termino" name="termino" (keyup.enter)="buscarProducto()"
+      <div class="rk-search">
+      <!--<div class="form-group">-->
+        <input type="text"
+          (keyup.enter)="buscarProducto(txtBuscar.value)"
+          placeholder="Buscar..."
+          id="urku-search"
+          class="rk-search-field"
+          #txtBuscar
         >
 
         <label for="urku-search">
